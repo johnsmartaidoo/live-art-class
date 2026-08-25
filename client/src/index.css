@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Workshop Ledger reminder: bone paper is the field, ink is the structure, studio olive is the making color, and clay is reserved for live moments. */
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -43,135 +44,164 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --radius: 0.35rem;
+  --background: oklch(0.955 0.018 82);
+  --foreground: oklch(0.21 0.018 115);
+  --card: oklch(0.985 0.01 83);
+  --card-foreground: oklch(0.21 0.018 115);
+  --popover: oklch(0.985 0.01 83);
+  --popover-foreground: oklch(0.21 0.018 115);
+  --primary: oklch(0.38 0.04 115);
+  --primary-foreground: oklch(0.985 0.01 83);
+  --secondary: oklch(0.91 0.025 82);
+  --secondary-foreground: oklch(0.27 0.02 115);
+  --muted: oklch(0.91 0.02 83);
+  --muted-foreground: oklch(0.46 0.026 115);
+  --accent: oklch(0.76 0.12 48);
+  --accent-foreground: oklch(0.21 0.018 115);
+  --destructive: oklch(0.61 0.17 32);
+  --destructive-foreground: oklch(0.99 0.01 83);
+  --border: oklch(0.83 0.03 83);
+  --input: oklch(0.83 0.03 83);
+  --ring: oklch(0.49 0.06 115);
+  --chart-1: oklch(0.38 0.04 115);
+  --chart-2: oklch(0.61 0.17 32);
+  --chart-3: oklch(0.70 0.10 76);
+  --chart-4: oklch(0.56 0.05 115);
+  --chart-5: oklch(0.30 0.03 115);
+  --sidebar: oklch(0.22 0.02 115);
+  --sidebar-foreground: oklch(0.92 0.02 83);
+  --sidebar-primary: oklch(0.75 0.10 76);
+  --sidebar-primary-foreground: oklch(0.21 0.018 115);
+  --sidebar-accent: oklch(0.31 0.025 115);
+  --sidebar-accent-foreground: oklch(0.95 0.018 82);
+  --sidebar-border: oklch(0.34 0.025 115);
+  --sidebar-ring: oklch(0.72 0.08 76);
 }
 
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+* { border-color: var(--border); }
+html { background: var(--background); }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  button:not(:disabled),
-  [role="button"]:not([aria-disabled="true"]),
-  [type="button"]:not(:disabled),
-  [type="submit"]:not(:disabled),
-  [type="reset"]:not(:disabled),
-  a[href],
-  select:not(:disabled),
-  input[type="checkbox"]:not(:disabled),
-  input[type="radio"]:not(:disabled) {
-    @apply cursor-pointer;
-  }
+button, a, input, select { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid #67735c;
+  outline-offset: 3px;
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
+  .flex { min-height: 0; min-width: 0; }
+}
 
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
+.paper-grain {
+  background-image:
+    radial-gradient(rgba(40, 42, 31, 0.045) 0.6px, transparent 0.7px),
+    radial-gradient(rgba(255, 255, 255, 0.32) 0.7px, transparent 0.8px);
+  background-position: 0 0, 3px 4px;
+  background-size: 9px 9px, 11px 11px;
+}
 
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
-    }
-  }
+.rule-lines {
+  background-image: linear-gradient(to bottom, transparent 31px, rgba(103, 115, 92, 0.13) 32px);
+  background-size: 100% 32px;
+}
 
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
-    }
-  }
+.display-face { font-family: "Fraunces", Georgia, serif; }
+.hand-underline { position: relative; display: inline-block; }
+.hand-underline::after {
+  content: "";
+  position: absolute;
+  left: 0.04em;
+  right: -0.08em;
+  bottom: -0.14em;
+  height: 0.12em;
+  min-height: 3px;
+  background: #c96e52;
+  border-radius: 50%;
+  transform: rotate(-1.2deg);
+  opacity: .86;
+}
+
+.lesson-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(118deg, rgba(255,255,255,.26), transparent 45%),
+    #f5f0e7;
+}
+
+.nav-ink { color: rgba(245, 240, 231, .72); transition: color 160ms ease, background 160ms ease, transform 160ms ease; }
+.nav-ink:hover, .nav-ink[data-active="true"] { color: #f5f0e7; background: rgba(245,240,231,.08); }
+.nav-ink:active { transform: scale(.97); }
+
+.paper-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #faf7f0;
+  background-image:
+    linear-gradient(103deg, rgba(255,255,255,.3), transparent 45%),
+    radial-gradient(rgba(40,42,31,.035) .55px, transparent .7px);
+  background-size: auto, 9px 9px;
+  box-shadow: 0 12px 28px rgba(51, 53, 39, .08), 0 2px 4px rgba(51, 53, 39, .06);
+}
+.paper-card::before {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 11px;
+  z-index: 4;
+  width: 30px;
+  height: 2px;
+  border-radius: 999px;
+  background: #c96e52;
+  opacity: .62;
+  transform: rotate(-4deg);
+}
+
+.workbench-panel { animation: rise-in 380ms cubic-bezier(.23,1,.32,1) both; }
+.workbench-panel:nth-child(2) { animation-delay: 70ms; }
+.workbench-panel:nth-child(3) { animation-delay: 140ms; }
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.live-pulse { animation: live-pulse 1.8s ease-in-out infinite; }
+@keyframes live-pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .42; transform: scale(.72); } }
+
+.tool-button { transition: transform 150ms cubic-bezier(.23,1,.32,1), background 150ms ease, color 150ms ease, box-shadow 150ms ease; }
+.tool-button:active { transform: scale(.95); }
+.tool-button:hover { transform: translateY(-1px); }
+
+.canvas-frame { position: relative; background: #e8e3d9; box-shadow: inset 0 0 0 1px rgba(40,42,31,.08), 0 16px 30px rgba(40,42,31,.1); }
+.canvas-frame::before, .canvas-frame::after { content: ""; position: absolute; width: 66px; height: 13px; background: rgba(201,110,82,.48); top: 14px; z-index: 2; }
+.canvas-frame::before { left: 18px; transform: rotate(-5deg); }
+.canvas-frame::after { right: 18px; transform: rotate(5deg); }
+
+@media (min-width: 640px) {
+  .container { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .container { max-width: 1440px; padding-left: 2rem; padding-right: 2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }
